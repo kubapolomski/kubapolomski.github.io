@@ -7,6 +7,12 @@ body {
     background-color: hsla(0, 0%, 8%, 1);
     color: hsla(0, 0%, 100%, .87);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
 }
 
 h1,
@@ -36,11 +42,30 @@ nav {
     font-size: .9rem;
     height: 5vh;
     text-transform: uppercase;
+    background-color: inherit;
 }
 
-nav div {
+.primary {
+    color: hsla(0, 0%, 100%, 1);
+}
+
+.tertiary {
+    color: hsla(0, 0%, 100%, .66);
+}
+
+nav>div {
     display: flex;
     align-items: center;
+}
+
+nav>div>a {
+    border-bottom: 2px solid #CCAE3D;
+    border-bottom: 2px solid hsla(47, 58%, 56%, 1);
+}
+
+nav>div>a:hover {
+    border-bottom: 3px solid #CCAE3D;
+    border-bottom: 3px solid hsla(47, 58%, 64%, 1);
 }
 
 nav>div>a.active {
@@ -49,35 +74,36 @@ nav>div>a.active {
 }
 
 footer {
-    height: 5vh;
+    padding: .5rem;
+    text-align: center;
+    margin: 2rem auto 1rem;
 }
 
 footer>p {
     text-align: center;
     font-size: .875rem;
     opacity: .87;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
     color: inherit;
-    border-bottom: 2px solid #CCAE3D;
 }
 
-a:hover {
-    border-bottom: 3px solid #CCAE3D;
-}
+
 
 button {
     padding: 12px 24px;
-    background-color: hsla(0, 0%, 100%, .7);
+    background-color: hsla(0, 0%, 16%, 1);
+    color: inherit;
     font-size: 0.875rem;
     text-transform: uppercase;
     transition: all ease-in-out .2s;
     cursor: pointer;
     border: 1px solid #1a1a1a;
     font-weight: 700;
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, .8);
+    box-shadow: 4px 4px 0px hsla(0, 0%, 0%, 1);
 }
 
 button:focus {
@@ -85,42 +111,70 @@ button:focus {
 }
 
 button:hover {
-    box-shadow: 1px 1px 0px rgba(0, 0, 0, .8);
+    box-shadow: 1px 1px 0px hsla(0, 0%, 0%, 1);
 }
 
 button:active {
-    box-shadow: inset 2px 2px 0px rgba(0, 0, 0, .8);
+    box-shadow: inset 2px 2px 0px hsla(0, 0%, 0%, 1);
 }
 
 .cta {
-    background-color: hsla(47, 58%, 52%, 1);
+    background-color: hsla(47, 58%, 56%, 1);
     color: #1a1a1a;
 }
 
 .cta:active {
-    background-color: hsla(47, 58%, 42%, 1);
+    background-color: hsla(47, 58%, 48%, 1);
+}
+
+.back {
+    margin-top: 2rem;
+    font-size: .75rem;
+}
+
+.back span {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.go-start {
+    position: fixed;
+    width: .875rem;
+    height: .875rem;
+    font-size: .875rem;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    border: 1px solid hsla(0, 0%, 88%, 1);
+    background-color: hsla(0, 0%, 8%, .8);
+    border-radius: 0px;
+    display: block;
+    text-align: center;
+}
+
+.go-start.hidden {
+    display: none;
 }
 
 main {
-    max-width: 800px;
-    height: 90vh;
-    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 2rem auto 1rem;
     padding: 0 1rem;
     position: relative;
+    scroll-behavior: smooth;
+}
+
+main.hero {
+    justify-content: center;
 }
 
 .intro>.cta {
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 section {
     background-color: hsla(0, 0%, 16%, 1);
-    width: 100%;
     margin-bottom: 2rem;
 }
 
@@ -128,12 +182,13 @@ section:last-child {
     margin-bottom: 0;
 }
 
-
-
 section>div {
     padding: 1rem;
 }
 
+article {
+    padding: 1rem 0 2rem;
+}
 
 @media screen and (min-width: 1440px) {
     header {
@@ -145,12 +200,25 @@ section>div {
 @media (prefers-color-scheme: light) {
     body {
         color: #000;
+        color: hsla(0, 0%, 16%, 1);
+        background-color: hsla(40, 12%, 98%, 1);
+    }
+
+    button {
         background-color: hsla(40, 12%, 98%, 1);
     }
 
     section {
         background-color: hsla(40, 12%, 98%, 1);
         border: 1px solid #1a1a1a;
+    }
+
+    .primary {
+        color: hsla(0, 0%, 4%, 1);
+    }
+
+    .tertiary {
+        color: hsla(0, 0%, 24%, 1);
     }
 
     .cta {

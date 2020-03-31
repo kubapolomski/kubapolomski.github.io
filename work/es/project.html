@@ -14,36 +14,37 @@
 <body>
 
     <!-- Navigation -->
-    <nav>
+    <nav id="nav">
         <div>
-            <a href="/index.html" class="active">Home</a>
+            <a href="/index.html">Home</a>
         </div>
         <div>
-            <a href="/work.html">My Work</a>
+            <a href="/work.html" class="active">My Work</a>
         </div>
         <div>
             <a href="/about.html">About Me</a>
         </div>
     </nav>
 
-    <!-- Content -->
-    <main class="hero">
-        <div class="intro">
-            <h1>Hi, I'm Kuba Polomski</h1>
-            <h2>Mediator between users' needs and business goals.
-                Always searching for ways to make things better.</h2>
-            <div class="spacing"></div>
-            <button class="cta" onclick="document.location = 'work.html'">Check out my latest work</button>
-        </div>
-    </main>
+    <!-- subnav -->
+    <div class="back tertiary"><a href="/work.html" title="Go back to all projects"><span class="primary">←</span></a>
+    </div>
 
-    <!-- Footer -->
+    <!-- project -->
+    <article>
+        <h1>EasySend Mobile Apps - Fintech<span> //put iOS & Android icons here//</span></h1>
+    </article>
+
+
+    <div class="go-start hidden"><a href="#nav">↑</a></div>
     <footer>
         <p>
             Cookie free website. Copyright © 2020
         </p>
         <p>work@kubapolomski.com</p>
     </footer>
+
+    <script src="/script.js"></script>
 </body>
 
 </html>
