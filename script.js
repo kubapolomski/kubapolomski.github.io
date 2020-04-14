@@ -10,3 +10,7 @@ function showBacktoTop() {
         startArrow.classList.remove('hidden') 
     }
 }
+
+// you could use smooth scrolling if the scrolling is inside scrollable parent element
+// e.g.
+// main { }
