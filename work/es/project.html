@@ -15,30 +15,32 @@
 
     <!-- Navigation -->
     <nav id="nav">
-        <div>
-            <a href="/index.html">Home</a>
-        </div>
-        <div>
-            <a href="/work.html" class="active">My Work</a>
-        </div>
-        <div>
-            <a href="/about.html">About Me</a>
-        </div>
+
+        <a href="/index.html">Home</a>
+        <a href="/work.html" class="active">My Work</a>
+        <a href="/about.html">About Me</a>
+
     </nav>
 
+    <!-- Content -->
     <main>
 
-        <!-- subnav -->
-        <div class="back tertiary"><a href="/work.html" title="Go back to all projects"><span
-                    class="primary">←</span></a>
+        <!-- back -->
+        <div class="back tertiary">
+            <a href="/work.html" title="Go back to all projects">
+                <span class="primary">
+                    ←
+                </span>
+            </a>
         </div>
 
         <!-- project -->
         <article>
+
             <header>
                 <div>
                     <h1>EasySend Mobile Apps</h1>
-                    <span>Fintech</span>
+                    <span>FinTech</span>
                 </div>
                 <div class="platforms">
                     <svg width="28px" height="32px" viewBox="0 0 28 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -54,27 +56,251 @@
                 </div>
             </header>
 
-            <h2>Overview</h2>
+            <img class="hero" src="/work/hlc/img/intro-hlc_app.png" alt="">
 
-            <p>As the EasySend International Transfers grew, they decided to add mobile apps to their existing product
-                (till
-                then they only had web application). As soon as I joined the company I was asked to transfer web
-                experience
-                to the mobile apps (iOS and Android), while improving user-flows where I could, with as least changes in
-                business logic as possible (same API for web and mobile apps).</p>
+            <!-- Project overview -->
+            <section>
+                <h2>Overview</h2>
+
+                <p>
+                    As the EasySend International Transfers grew, they decided to&nbsp;add mobile apps to&nbsp;their
+                    existing
+                    product (till then, they only had web application). As soon as&nbsp;I&nbsp;joined the&nbsp;company,
+                    I&nbsp;was
+                    asked
+                    to&nbsp;transfer web experience to&nbsp;the&nbsp;mobile apps (iOS and Android), while improving
+                    user-flows
+                    where I
+                    could, with as least changes in business logic as possible (same API for web and&nbsp;mobile apps).
+                </p>
+
+
+
+                <!-- Sumup -->
+                <div class="sumup">
+                    <div>
+                        <h4>Team</h4>
+
+                        <ul>
+
+                            <li>Product Owner</li>
+                            <li>Business Analyst</li>
+                            <li>Product Designer (me)</li>
+                            <li>2 iOS & 2 Android developers (external&nbsp;company)</li>
+                            <li>2 back-end developers working on&nbsp;API for&nbsp;apps (internal)</li>
+                            <p>We were working in&nbsp;Scrum (Agile) framework.</p>
+                            <p>
+                                I've also worked with the Marketing Team to&nbsp;set brand language and&nbsp;style
+                                and&nbsp;incorporate
+                                it&nbsp;into our apps.
+                            </p>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Deliverables</h4>
+                        <ul>
+                            <li>Lo-fi sketches</li>
+                            <li>Hi-fi mock-ups (Photoshop, Sketch)</li>
+                            <li>User-flows, diagrams</li>
+                            <li>InVision prototypes</li>
+                            <li>Microinteractions (Principle, Flinto)</li>
+                            <li>User testing raports</li>
+                            <li>Copy (UX Writing, microcopy)</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <h2>The process</h2>
+
+            <!-- 1. Research -->
+            <section>
+                <h3>1. Research</h3>
+                <p>
+                    Since EasySend had no&nbsp;previous UX research, I&nbsp;had to&nbsp;start with that. They knew very
+                    much about
+                    their users, but&nbsp;mostly from a&nbsp;marketing perspective. It&nbsp;didn't tell me much about
+                    users' needs and&nbsp;their problems.
+                </p>
+                <h4>Methods</h4>
+
+                <ul>
+                    <li>Interviews with existing EasySend users and&nbsp;stakeholders</li>
+                    <li>Behavior analysis (Google Analytics, HotJar)</li>
+                    <li>Personas</li>
+                    <li>Surveys</li>
+                </ul>
+                <p>
+                    I started by&nbsp;interviewing our users to&nbsp;create a&nbsp;real-life persona. After dozens
+                    of&nbsp;quick interviews
+                    over the phone, I&nbsp;already discovered patterns for&nbsp;our users - what problems and&nbsp;needs
+                    they had. I&nbsp;created 2&nbsp;primary personas for&nbsp;whom I&nbsp;designed the&nbsp;app.
+                </p>
+                <figure>
+                    <a href="/work/es/img/main-persona.png" target="_blank" title="Click to enlarge">
+                        <img src="/work/es/img/main-persona.png" alt="Main persona of EasySend users">
+                    </a>
+                    <figcaption>
+                        Primary persona based on users interviews<br>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <a href="/work/es/img/secondary-persona.png" target="_blank" title="Click to enlarge">
+                        <img src="/work/es/img/secondary-persona.png" alt="Secondary persona of EasySend users">
+                    </a>
+                    <figcaption>
+                        Secondary persona based on users interviews<br>
+                    </figcaption>
+                </figure>
+
+            </section>
+            <!-- 2. Ideation -->
+            <section>
+                <h3>2. Ideation</h3>
+                <div>
+                    <h4>App architecture</h4>
+                    <figure>
+                        <a href="/work/es/img/sketch-architecture.png" target="_blank">
+                            <img src="/work/es/img/sketch-architecture.png"
+                                alt="First sketches of new app architecture">
+                        </a>
+                        <figcaption>
+                            First sketches of new app architecture<br>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div>
+                    <h4>Login screens</h4>
+                    <div class="gallery">
+                        <figure>
+                            <a href="/work/es/img/register-phone-email.png" target="_blank" title="Click to enlarge">
+                                <img src="/work/es/img/register-phone-email.png"
+                                    alt="Exploring ideas for registering an account">
+                            </a>
+                            <figcaption>
+                                Register with email or phone number<br>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <a href="/work/es/img/register-phone-email2.png" target="_blank" title="Click to enlarge">
+                                <img src="/work/es/img/register-phone-email2.png" alt="Login / Registration screens">
+                            </a>
+                            <figcaption>
+                                Login / Registration flow<br>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <p>
+                        At first, I was thinking about registration with the phone number, as the flow would be more
+                        comfortable than with email (and it's activation link), where you have to go back-and-forth
+                        between the EasySend app and Mail client.
+                    </p>
+                    <p>
+                        But after reviewing ideas with the Marketing team, we decided to leave just email/ social media
+                        registration. The email was more valuable to them than a phone number, and our users reported
+                        that giving an email address is less concerning than giving phone numbers (especially before
+                        making the first transfer).
+                    </p>
+                </div>
+                <div>
+                    <h4>Transfer summary</h4>
+                    <figure>
+                        <a href="/work/es/img/summary.png" target="_blank" title="Click to enlarge">
+                            <img src="/work/es/img/summary.png" alt="How to show">
+                        </a>
+                        <figcaption>
+                            How to make it easier for users to compare the amount to be paid with the amount that the
+                            recipient will receive
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <p></p>
+            </section>
+            <!-- 3. Lo-Fi mockups -->
+            <section>
+                <h3>3. Mockups & Flow</h3>
+                <div class="gallery">
+                    <figure>
+                        <a href="/work/es/img/early-flow.gif" target="_blank">
+                            <img class="gif" src="/work/es/img/early-flow.gif" alt="Lo-Fi dashboard interaction">
+                        </a>
+                        <figcaption>
+                            Lo-Fi dashboard mockup & interactions<br>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <a href="/work/es/img/early-flow2.gif" target="_blank">
+                            <img class="gif" src="/work/es/img/early-flow2.gif"
+                                alt="Dashboard to transfer calculator interaction">
+                        </a>
+                        <figcaption>
+                            Early stage dashboard to transfer calculator interaction<br>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+
+
+            <h2>Solutions</h2>
+
+            <!-- IA -->
+            <section>
+                <h3>Information Architecture</h3>
+                <p>
+                    Our mobile version of the web application had quite a complicated navigation system. It was divided
+                    into two sections: one in bottom tab bars and one hidden in the hamburger menu. Therefore users had
+                    to decide which navigation to use.
+                </p>
+                <p>
+                    I had to redesign our architecture for mobile apps, so users wouldn't have to think about where they
+                    can find different things. Based on HotJar recording, I knew that sometimes even experienced users
+                    had problems navigating our web-app.
+                </p>
+
+
+                <figure>
+                    <a href="/work/es/img/wireflow.png" target="_blank" title="Click to enlarge">
+                        <img src="/work/es/img/wireflow.png" alt="Wireflow of new app architecture">
+                    </a>
+                    <figcaption>
+                        Wireflow of new app architecture<br>
+                    </figcaption>
+                </figure>
+                <p>
+                    I've decided to use the bottom navigation bar with tabs (as that was easiest to use navigation
+                    system) with 4 main items: Dashboard, Transfers, Recipients, Profile. One item in menu would be for
+                    call-to-action: Send money - right in the middle.
+                </p>
+                <p>
+                    Later on, I decided to remove the Dashboard view because we had to cut as many things as we could
+                    for the MLP (MVP) version. You can see final IA in lives apps in <a
+                        href="https://play.google.com/store/apps/details?id=pl.easysend.mobile">Play Store</a> or <a
+                        href="https://apps.apple.com/pl/app/easysend/id1446210174">App Store</a>.
+                </p>
+            </section>
+
 
         </article>
     </main>
 
-
+    <!-- Scroll to top -->
     <a href="#nav">
         <div class="go-start hidden">↑</div>
     </a>
+
+    <!-- Footer -->
     <footer>
         <p>
             Cookie free website. Copyright © 2020
         </p>
-        <p>work@kubapolomski.com</p>
+        <p>
+            <a href="mailto:work@kubapolomski.com">work@kubapolomski.com</a>
+        </p>
     </footer>
 
     <script src="/script.js"></script>

@@ -15,23 +15,23 @@
 
     <!-- Navigation -->
     <nav id="nav">
-        <div>
-            <a href="/index.html">Home</a>
-        </div>
-        <div>
-            <a href="/work.html" class="active">My Work</a>
-        </div>
-        <div>
-            <a href="/about.html">About Me</a>
-        </div>
+
+        <a href="/index.html">Home</a>
+        <a href="/work.html" class="active">My Work</a>
+        <a href="/about.html">About Me</a>
+
     </nav>
 
 
     <main>
 
         <!-- back -->
-        <div class="back tertiary"><a href="/work.html" title="Go back to all projects"><span
-                    class="primary">←</span></a>
+        <div class="back tertiary">
+            <a href="/work.html" title="Go back to all projects">
+                <span class="primary">
+                    ←
+                </span>
+            </a>
         </div>
 
         <!-- project -->
@@ -53,12 +53,17 @@
                         </path>
                     </svg>
                 </div>
-
             </header>
-            <div>
+            <img class="hero" src="/work/hlc/img/intro-hlc_app.png" alt="">
+
+            <div class="disclaimer">
                 <h4>Disclaimer:</h4>
-                <p>I worked under NDA on this project, so I can't show you final visuals</p>
+                <p>
+                    I worked under NDA on this project, so I can't show you most of visuals. I would like to just
+                    describe my design process.
+                </p>
             </div>
+
             <section>
                 <h2>Overview</h2>
 
@@ -75,9 +80,9 @@
                     questions, with 4 tiers of hierarchy.
                 </p>
 
-                <summary>
+                <div class="sumup">
                     <div>
-                        <h3>Team</h3>
+                        <h4>Team</h4>
 
                         <ul>
 
@@ -85,11 +90,11 @@
                             <li>Visual Designer</li>
                             <li>2 iOS developers (font)</li>
                             <li>Back-end developer</li>
-                            <p>We worked in waterfall framework</p>
+                            <p>We worked in Waterfall framework :(</p>
                         </ul>
                     </div>
                     <div>
-                        <h3>Deliverables</h3>
+                        <h4>Deliverables</h4>
                         <ul>
                             <li>Lo-fi sketches</li>
                             <li>Hi-fi mock-ups (Photoshop, Sketch)</li>
@@ -100,7 +105,7 @@
                         </ul>
                     </div>
 
-                </summary>
+                </div>
 
             </section>
 
@@ -136,9 +141,9 @@
                     </li>
                 </ul>
 
-                <h4>Results (a.k.a. jobs to be done)</h4>
+                <h4>Results (a.k.a.&nbsp;jobs&nbsp;to&nbsp;be&nbsp;done)</h4>
 
-                <ul class="results">
+                <ul class="results with-headers">
                     <li>
                         <span>Stand out from the competition</span>
                         <span>
@@ -169,7 +174,7 @@
                     <li>
                         <span>Around 1500 questions</span>
                         <span>
-                            This is a lot of questions that could be asked. By a lot, I mean a lot.
+                            This is a lot of questions that could be asked. By a lot, I mean <strong>a lot</strong>.
                         </span>
                     </li>
                 </ul>
@@ -183,7 +188,7 @@
 
                 <h4>Results</h4>
 
-                <ul class="results">
+                <ul class="results with-headers">
                     <li>
                         <span>iPad Pro app</span>
                         <span>Imagine one of the agents pulling out their iPad Pro which was
@@ -192,6 +197,7 @@
                             etc. We were
                             sure that the new way of working would be standing out from what competition had.
                         </span>
+                        <br>
                         <span>iPad was also great at taking photos, so agents wouldn't have to take
                             additional
                             pieces of equipment with them. The stylus was an extra feature that could help our users
@@ -202,7 +208,7 @@
                     </li>
                     <li>
                         <span>The survey-based on switch components</span>
-                        <span>speed up work I came up with the switch-based screen, which only would
+                        <span>To speed up work I came up with the switch-based screen, which only would
                             need 1 tap to “check”</span>
                     </li>
                     <li>
@@ -214,6 +220,13 @@
                             expanded during the questionnaire process.</span>
                     </li>
                 </ul>
+
+                <div class="gallery">
+                    <figure>
+                        <img src="/work/hlc/img/early-sketches3.png" alt="Early sketches of questionnaire">
+                        <figcaption>Early sketches of questionnaire interface</figcaption>
+                    </figure>
+                </div>
             </section>
 
             <section>
@@ -262,6 +275,56 @@
                     <li>Much easier and faster survey completion and switching between topics</li>
                 </ul>
             </section>
+
+            <summary>
+                <h2>
+                    Final thoughts
+                </h2>
+                <p>
+                    When the 1.0 version was shipped to our customer, I already knew that we could do a much better job
+                    if we would work in the Agile/Scrum framework. Delivering small parts of the app and then testing
+                    them with real users. But we were working in Waterfall, so the whole app was built upfront. Of
+                    course, prototypes helped, but still, that would save us a lot of work.
+                </p>
+                <p>
+                    <strong>I'm most proud of is the Summary screen.</strong> <br>
+                    I had to combine 4 different parts of the questionnaire into one chart
+                </p>
+                <ul>
+                    <li>
+                        the score of the whole domain
+                    </li>
+                    <li>
+                        importance (weight) of areas in the given domain
+                    </li>
+                    <li>
+                        the scores of different sections in the area
+                    </li>
+                    <li>
+                        the scores of subsections
+                    </li>
+
+                </ul>
+                <p>
+                    I've searched through every chart collection and couldn't find anything that would work in this
+                    scenario.</p>
+                <p>
+                    So here's what I came up with:
+                </p>
+
+                <img src="/work/hlc/img/summary.png"
+                    alt="Wireframe of the summary chart showing up 3 different levels of scoring">
+                <p>
+                    It was a combination between the Pie Chart and the Polar Area Chart.
+                    The weight was shown as Pie Chart (width of the section), and its score was shown as Polar Area
+                    Chart (radius of the section).
+                </p>
+                <p>
+                    Every section was tappable, so it would reveal subsections, and it's scoring.
+                </p>
+
+                <h5>Thank you for reading</h5>
+            </summary>
         </article>
     </main>
     <a href="#nav">
@@ -272,7 +335,7 @@
         <p>
             Cookie free website. Copyright © 2020
         </p>
-        <p>work@kubapolomski.com</p>
+        <p><a href="mailto:work@kubapolomski.com">work@kubapolomski.com</a></p>
     </footer>
 
     <script src="/script.js"></script>

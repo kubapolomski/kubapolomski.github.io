@@ -1,16 +1,19 @@
 /* Made by Kuba Polomski. Uncopyrighted (you can use it anywhere you want) */
 
 :root {
+    font-size: 106.5%;
+    /*  16px base font size */
     --background-color: hsla(40, 12%, 96%, 1);
     --primary-color: hsla(0, 0%, 0%, .80);
     --secondary-color: hsla(0, 0%, 0%, .64);
     --tertiary-color: hsla(0, 0%, 0%, .48);
-    --accent-color: hsla(47, 58%, 56%, 1);
-    --accent-color-darker: hsla(47, 58%, 64%, 1);
+    --accent-color: hsla(48, 64%, 64%, 1);
+    --accent-color-darker: hsla(48, 56%, 56%, 1);
     --shadow-color: hsla(0, 0%, 0%, 1);
     --primary-on-accent-color: hsla(0, 0%, 0%, .80);
     --card-color: hsla(40, 12%, 92%, 1);
 }
+
 
 
 
@@ -20,11 +23,15 @@
         --primary-color: hsla(0, 0%, 100%, .80);
         --secondary-color: hsla(0, 0%, 100%, .64);
         --tertiary-color: hsla(0, 0%, 100%, .48);
-        --accent-color: hsla(47, 58%, 56%, 1);
-        --accent-color-darker: hsla(47, 58%, 64%, 1);
+        --accent-color: hsla(48, 56%, 56%, 1);
+        --accent-color-darker: hsla(48, 48%, 48%, 1);
         --shadow-color: hsla(0, 0%, 0%, 1);
         --primary-on-accent-color: hsla(0, 0%, 0%, .80);
         --card-color: hsla(40, 12%, 12%, 1);
+    }
+
+    img {
+        opacity: .8;
     }
 }
 
@@ -68,8 +75,7 @@ h2,
 h3,
 h4,
 p {
-    margin-bottom: 1em;
-    /* margin-top: 2em; */
+    margin: 1em 0;
 }
 
 h1,
@@ -82,33 +88,71 @@ h5 {
 
 h1 {
     font-weight: 700;
+    font-size: 2rem;
 }
 
 h2 {
     font-weight: 400;
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
 }
 
 h5 {
     margin-bottom: .8em;
 }
 
+p {
+    color: var(--secondary-color);
+}
+
+strong {
+    color: var(--primary-color);
+}
+
 li {
     margin-left: 1em;
-    list-style-position: inside;
+    list-style-position: outside;
     margin-bottom: .875rem;
 }
 
-.results {
-    margin-left: 24px;
+a {
+    /* text-decoration: none; */
+    color: inherit;
 }
 
-.results span:first-of-type {
+.results {
+    margin-left: .5rem;
+}
+
+.results ul {
+    margin-top: 1rem;
+}
+
+.results.with-headers {
+    list-style-type: none;
+}
+
+.results li:not(:first-of-type) {
+    margin-top: 2rem;
+}
+
+
+.results li span:first-of-type {
     font-weight: bold;
+    line-height: 1.2rem;
 }
 
 .results span:not(:first-of-type) {
+    margin-top: .5rem;
     display: block;
-    color: var(--tertiary-color);
+    color: var(--secondary-color);
     font-weight: normal;
 }
 
@@ -120,27 +164,25 @@ nav {
     display: flex;
     justify-content: space-evenly;
     align-content: center;
-    font-size: .9rem;
+    align-items: center;
     height: 10vh;
     text-transform: uppercase;
     background-color: inherit;
 }
 
-nav>div {
-    display: flex;
-    align-items: center;
-}
-
-nav>div>a {
+nav>a {
+    width: calc(33.3% - 1.5rem);
+    text-align: center;
     color: var(--primary-color);
     border-bottom: 2px solid var(--accent-color);
+    text-decoration: none;
 }
 
-nav>div>a:hover {
+nav>a:hover {
     border-bottom: 3px solid var(--accent-color-darker);
 }
 
-nav>div>a.active {
+nav>a.active {
     font-weight: 700;
     border: none;
 }
@@ -152,7 +194,9 @@ header {
 }
 
 header>div>h1 {
-    margin-bottom: 0;
+    margin: 0;
+    /* margin-bottom: .8rem; */
+    line-height: 2.5rem;
 }
 
 header .platforms {
@@ -183,35 +227,42 @@ footer>p {
     margin: 0;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+footer a {
+    text-decoration: underline;
 }
 
-summary {
+
+
+
+
+.sumup {
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-bottom: 2rem;
+    margin: 3rem 0;
     font-size: .875rem;
     background-color: var(--card-color);
 }
 
-summary>div {
+.sumup>div {
     width: calc(50% - 2rem);
     padding: 1rem;
 }
 
-summary li {
-    line-height: 1.4rem;
+.sumup li {
+    /* line-height: 1.4rem; */
     color: var(--primary-color);
 }
 
-summary p {
+.sumup p {
     margin-left: 1rem;
     color: var(--secondary-color);
     line-height: normal;
+}
+
+.sumup h4 {
+    margin-top: 0;
 }
 
 
@@ -241,22 +292,27 @@ button:active {
     box-shadow: inset 2px 2px 0px var(--shadow-color);
 }
 
-.cta {
+button.cta {
     background-color: var(--accent-color);
     color: var(--primary-on-accent-color);
 }
 
-.cta:active {
+button.cta:active {
     background-color: hsla(47, 58%, 48%, 1);
 }
 
 .back {
     font-size: .75rem;
+
+}
+
+.back a {
+    padding: 1rem 1rem 1rem 0;
+    text-decoration: none;
 }
 
 .back span {
     font-size: 1.5rem;
-    margin-right: 1rem;
 }
 
 .go-start {
@@ -286,22 +342,35 @@ main {
     position: relative;
 }
 
-main.hero {
-    justify-content: center;
+.welcome {
+    padding: 0 1rem;
 }
 
-.intro>.cta {
+.welcome h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.welcome>.cta {
+    float: right;
     margin-top: 2rem;
 }
 
-article section {
-    border: none;
-    padding: 0;
+img {
+    max-width: 100%;
+    /* border-radius: 4px; */
+
+    /* border: 1px solid var(--tertiary-color); */
 }
+
+section>figure:not(:first-of-type) {
+    margin-top: 3rem;
+}
+
 
 section {
     border: 1px solid var(--tertiary-color);
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     padding: 1rem;
 }
 
@@ -313,8 +382,111 @@ section:last-child {
     margin-bottom: 0;
 }
 
+section h3 {
+    margin-top: 0;
+}
+
+.project button {
+    float: right;
+}
+
+section.project h5 {
+    margin: 1rem 0 0;
+}
+
+section.project p {
+    margin-top: .5rem;
+}
+
 article {
     padding: 1rem 0 2rem;
 }
 
-@media screen and (min-width: 1440px) {}
+article h1,
+article h2,
+article h3,
+article h4 {
+    margin: 4rem 0 .5em;
+}
+
+article section {
+    border: none;
+    padding: 0;
+    margin-bottom: 4rem;
+}
+
+article>section:first-of-type {
+    margin-top: 4rem;
+}
+
+
+.disclaimer {
+    margin: 2rem 0;
+}
+
+
+.disclaimer h4 {
+    margin: 0;
+}
+
+
+.gallery {
+    display: flex;
+    align-items: flex-start;
+    /* overflow-x: auto; */
+    justify-content: center;
+    /* padding: 1rem; */
+}
+
+.gallery img {
+    max-height: 50vh;
+}
+
+
+
+figure {
+    text-align: center;
+}
+
+figure img.gif {
+    border: 1px solid var(--tertiary-color);
+    border-radius: 8px;
+}
+
+section .gallery figure:not(:first-of-type) {
+    margin-top: 0;
+    margin-left: 1rem;
+}
+
+figcaption {
+    display: block;
+    font-size: .875rem;
+    text-align: center;
+}
+
+summary li {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .sumup {
+        display: block;
+    }
+
+    .sumup>div {
+        width: calc(100% - 2rem);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    :root {
+        font-size: 87.5%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    nav>a {
+        width: auto;
+    }
+}
