@@ -394,6 +394,10 @@ video {
     max-width: 100%;
 }
 
+.video-description {
+    text-align: center;
+}
+
 section {
     margin-bottom: 4rem;
     /* padding: 1rem; */
@@ -412,9 +416,15 @@ section:last-child {
     margin-bottom: 0;
 }
 
-section h3 {
+article section h3 {
     margin-top: 0;
 }
+
+article>section>section>span {
+    font-size: .7rem;
+    text-transform: uppercase;
+}
+
 
 section.project {
     border: 1px solid var(--tertiary-color);
@@ -550,11 +560,11 @@ summary li {
 }
 
 blockquote {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 section blockquote:not(first-of-type) {
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 section blockquote:nth-of-type(even) {
@@ -564,26 +574,11 @@ section blockquote:nth-of-type(even) {
 blockquote p {
     font-style: italic;
     margin-bottom: 0;
+    color: var(--primary-color)
 }
-
-/* blockquote p::before,
-blockquote p::after {
-    content: "“";
-    font-family: serif;
-    font-size: 8rem;
-    margin: -2rem 0 0 -4rem;
-    position: absolute;
-    opacity: 0.5;
-}
-
-
-blockquote p::after {
-    content: "”";
-    margin: -1rem -4rem 0 0;
-} */
 
 blockquote cite {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .overview {
